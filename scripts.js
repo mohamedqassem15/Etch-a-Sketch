@@ -1,4 +1,12 @@
 
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
 
 const container = document.getElementById('container');
 let tableSize = 16;
@@ -16,10 +24,13 @@ function createTable (container, tableSize){
             // Add event listeners for hover effect
             square.addEventListener('mouseenter', () => {
                 square.classList.add('hovered');
+                square.style.backgroundColor = getRandomColor();
+
             });
 
             square.addEventListener('mouseleave', () => {
                 square.classList.remove('hovered');
+                square.style.backgroundColor = '';
             });
         }
     }
