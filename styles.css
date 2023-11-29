@@ -1,0 +1,20 @@
+
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px; /* Adjust the width to fit your design */
+    height: 320px;
+}
+
+.grid-square {
+    width: 20px; /* Adjust the width and height for your square size */
+    height: 20px;
+    border: 1px solid #000; /* Border for visualization */
+    box-sizing: border-box;
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+
+.hovered {
+    background-color: #00f; /* Color to change to when hovered */
+}
